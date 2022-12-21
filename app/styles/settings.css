@@ -1,0 +1,245 @@
+body {
+    margin: 0px;
+    height: 100vh;
+    max-width: 80%;
+    margin: auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    column-gap: 0.125rem;
+    height: 80px;
+}
+
+header > p {
+    user-select: none;
+}
+
+input {
+    accent-color: #EC008C;
+}
+
+header > .title {
+    margin: 0px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+header > button:hover {
+    color: black;
+}
+
+footer {
+    border-top: 1px solid #ddd;
+    position: fixed;
+	bottom: 0;
+    width: 100%;
+    padding: 0.2rem;
+    display: flex;
+    align-items: center;
+}
+
+footer > a {
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    width: 7rem;
+    height: 2.6rem;
+    cursor: pointer;
+    padding: 0px;
+    margin: 0px;
+    column-gap: 0.5rem;
+    text-decoration: none; 
+    color: gray;
+}
+
+footer > a:hover {
+    color: black;
+}
+
+footer > a > p {
+    font-size: 0.85rem;
+}
+
+footer > a > svg{
+    width: 1.3rem;
+    height: 1.3rem;
+}
+
+p {
+    margin: 0px;
+}
+
+label {
+    user-select: none;
+    cursor: pointer;
+}
+
+h2 {
+    margin-top: 0px;
+}
+
+textarea {
+    width: 40rem;
+    height: 10rem;
+    padding: 10px 15px;
+    border-radius: 3px;
+    border: 2px solid #ddd;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 125%;
+}
+
+/* CSSコード */
+.toggle_input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.toggle_label {
+  width: 2.4rem;
+  height: 1.2rem;
+  background: #ccc;
+  position: relative;
+  display: inline-block;
+  border-radius: 40px;
+  transition: 0.25s;
+  box-sizing: border-box;
+}
+
+.toggle_label:after {
+  content: "";
+  position: absolute;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 100%;
+  left: 0.15rem;
+  top: 0.15rem;
+  z-index: 2;
+  background: #fff;
+  transition: 0.25s;
+}
+
+.toggle_input:checked + .toggle_label {
+    background: #EC008C;
+}
+
+.toggle_input:checked + .toggle_label:after {
+  left: 1.3rem;
+}
+
+.toggle_button {
+  position: relative;
+  width: 2.4rem;
+  height: 1.2rem;
+}
+
+.container {
+    padding-top: 0.6rem;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+}
+
+.group {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+    column-gap: 0.75rem;
+}
+
+.nogroup {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+.nogroup img {
+    border-radius: 0.1rem;
+}
+
+.group label {
+    font-size: 0.9rem;
+}
+
+.input_group {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+.box {
+    display: flex;
+    column-gap: 4rem;
+}
+
+.box > ul {
+    padding: 0px;
+}
+
+
+.box > ul > input {
+    display: none;
+}
+
+.box > ul > label {
+    padding-bottom: 0.2rem;
+    color: #950059;
+    font-size: medium;
+    cursor: pointer;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    height: 1.8rem;
+}
+
+.box > ul > input:checked + label {
+    color: black;
+    font-size: medium;
+    border-bottom: 2px solid #950059;
+    cursor: pointer;
+}
+
+.check_box > input {
+    transform: scale(1.5);
+    transition: background 175ms cubic-bezier(0.1, 0.1, 0.25, 1);
+}
+
+.wraning {
+    color: red;
+}
+
+.resetbutton {
+    border: none;
+    background: transparent;
+    padding: 0px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    color: #0091ff
+}
+
+.resetbutton:hover {
+    text-decoration: underline;
+}
+
+.tabcontainer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.favicon {
+    width: 1.5rem;
+    height: 1.5rem;
+}

@@ -1,31 +1,27 @@
 {
-  "name": "__MSG_appName__",
-  "short_name": "__MSG_appShortName__",
-  "description": "__MSG_appDescription__",
+  "name": "Jumon",
+  "short_name": "Jumon",
+  "description": "術師のための拡張機能",
   "version": "0.0.0",
   "manifest_version": 2,
-  "default_locale": "en",
+  "default_locale": "jp",
   "icons": {
     "16": "images/icon-16.png",
     "128": "images/icon-128.png"
   },
-  "background": {
-    "scripts": [
-      "scripts/background.js"
-    ]
-  },
-  "options_page": "pages/options.html",
-  "options_ui": {
-    "page": "pages/options.html",
-    "chrome_style": true
+  "content_scripts": [
+    {
+      "matches": ["https://twitter.com/*"],
+      "js": ["scripts/twitter.js"]
+    }
+  ],
+  "browser_action":{
+    "default_icon": {
+    },
+    "default_title":"開いてるタブの数を表示する",
+    "default_popup":"pages/popup.html"
   },
   "permissions": [
-    "clipboardRead",
-    "clipboardWrite",
-    "activeTab",
-    "storage",
-    "contextMenus",
-    "tabs",
-    "<all_urls>"
+    "storage"
   ]
 }

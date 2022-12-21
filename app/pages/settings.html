@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <script src="../scripts/settings.js"></script>
+        <link href="../styles/settings.css" rel="stylesheet">
+        <title>Jumon Extension 設定</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>設定</h1>
+            <div class="box">
+                <ul class="tabcontainer">
+                    <input id="tab1" class="tab" type="radio" name="tab" data-tabid="1" checked/>
+                    <label for="tab1">Twitterでの自動入力</label>
+                    <!-- <input id="tab2" class="tab" type="radio" name="tab" data-tabid="2" />
+                    <label for="tab2">投稿サイトへの自動入力</label> -->
+                </ul>
+                <ul>
+                    <section class="section" data-bodyid="1" >
+                        <h2>自動入力の設定</h2>
+                        <div>
+                            <h3>入力する情報を選択</h3>
+                            <div class="group">
+                                <div class="check_box">
+                                    <input id="toggle1" class="autoinput_select" type='checkbox' data-name="positive" />
+                                    <label for="toggle1" class=""/>
+                                </div>
+                                <label for="toggle1">プロンプト</label>
+                            </div>
+                            <div class="group">
+                                <div class="check_box">
+                                    <input id="toggle2" class="autoinput_select" type='checkbox' data-name="negative" />
+                                    <label for="toggle2" class=""/>
+                                </div>
+                                <label for="toggle2">ネガティブプロンプト</label>
+                            </div>
+                            <div class="group">
+                                <div class="check_box">
+                                    <input id="toggle7" class="autoinput_select" type='checkbox' data-name="sampler" />
+                                    <label for="toggle7" class=""/>
+                                </div>
+                                <label for="toggle7">サンプラー</label>
+                            </div>
+                            <div class="group">
+                                <div class="check_box">
+                                    <input id="toggle6" class="autoinput_select" type='checkbox' data-name="scale" />
+                                    <label for="toggle6" class=""/>
+                                </div>
+                                <label for="toggle6">スケール</label>
+                            </div>
+                            <div class="group">
+                                <div class="check_box">
+                                    <input id="toggle4" class="autoinput_select" type='checkbox' data-name="seed" />
+                                    <label for="toggle4" class=""/>
+                                </div>
+                                <label for="toggle4">シード</label>
+                            </div>
+                            <div class="group">
+                                <div class="check_box">
+                                    <input id="toggle5" class="autoinput_select" type='checkbox' data-name="steps" />
+                                    <label for="toggle5" class=""/>
+                                </div>
+                                <label for="toggle5">ステップ数</label>
+                            </div>
+                            <div class="group">
+                                <div class="check_box">
+                                    <input id="toggle3" class="autoinput_select" type='checkbox' data-name="size" />
+                                    <label for="toggle3" class=""/>
+                                </div>
+                                <label for="toggle3">サイズ</label>
+                            </div>
+                        </div>
+                        <div style="margin-top: 2rem;">
+                            <h3>プロンプトが1000文字をこえた時</h3>
+                            <div class="group">
+                                <div class="input_group">
+                                    <div class="check_box">
+                                        <input id="toggle8" class="autoinput_over" type='radio' name="plus1000" data-name="none" />
+                                        <label for="toggle8" class=""/>
+                                    </div>
+                                    <label for="toggle8">自動入力しない</label>
+                                </div>
+                                <div class="input_group">
+                                    <div class="check_box">
+                                        <input id="toggle9" class="autoinput_over" type='radio' name="plus1000" data-name="auto" />
+                                        <label for="toggle9" class=""/>
+                                    </div>
+                                    <label for="toggle9">1000文字まで入力する</label>
+                                </div>
+                                <!-- <div class="input_group">
+                                    <div class="check_box">
+                                        <input id="toggle10" class="autoinput_over" type='radio' name="plus1000" data-name="split" />
+                                        <label for="toggle10" class=""/>
+                                    </div>
+                                    <label for="toggle10">（複数枚投稿のみ）分割して出力する</label>
+                                </div> -->
+                            </div>
+                        </div>
+                        <div style="margin-top: 2rem;">
+                            <div class="group">
+                                <h3>フォーマットを指定（上級者用設定）</h3>
+                                <button class="resetbutton">リセット</button>
+                                <p class="wraning">※ここを編集すると、上の変更が反映されなくなります</p>
+                            </div>
+                            <textarea class="autoinput_format"></textarea>
+                        </div>
+                    </section>
+                    <!-- <section class="section" data-bodyid="2" >
+                        <h2>自動入力の設定</h2>
+                        <div>
+                            <h3>自動入力するサイトを選択</h3>
+                            <div class="group">
+                                <div class="toggle_button">
+                                    <input id="toggle11" class="toggle_input autoinput_sites" type='checkbox' data-name="chichipui" checked />
+                                    <label for="toggle11" class="toggle_label"/>
+                                </div>
+                                <div class="nogroup">
+                                    <img class="favicon" src="https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.chichi-pui.com/&size=256">
+                                    <label for="toggle11">ちちぷい</label>
+                                </div>
+                            </div>
+                            <div class="group">
+                                <div class="toggle_button">
+                                    <input id="toggle12" class="toggle_input autoinput_sites" type='checkbox' data-name="aipictors" checked />
+                                    <label for="toggle12" class="toggle_label"/>
+                                </div>
+                                <div class="nogroup">
+                                    <img class="favicon" src="https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.aipictors.com/&size=256">
+                                    <label for="toggle12">AI PICTORS</label>
+                                </div>
+                            </div>
+                            <div class="group">
+                                <div class="toggle_button">
+                                    <input id="toggle13" class="toggle_input autoinput_sites" type='checkbox' data-name="aivy" checked />
+                                    <label for="toggle13" class="toggle_label"/>
+                                </div>
+                                <div class="nogroup">
+                                    <img class="favicon" src="https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://aivy.run/&size=256">
+                                    <label for="toggle13">Aivy</label>
+                                </div>
+                            </div>
+                            <div class="group">
+                                <div class="toggle_button">
+                                    <input id="toggle14" class="toggle_input autoinput_sites" type='checkbox' data-name="aipic" checked />
+                                    <label for="toggle14" class="toggle_label"/>
+                                </div>
+                                <div class="nogroup">
+                                    <img class="favicon" src="https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.aipic.app/&size=256">
+                                    <label for="toggle14">AIPIC</label>
+                                </div>
+                            </div>
+                        </div>
+                    </section> -->
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
+
